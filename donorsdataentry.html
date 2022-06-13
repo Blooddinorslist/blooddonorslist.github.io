@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Donors data entry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+    <style type="text/css" media="all">
+        body {
+            color: white;
+            background-color: #3e2723;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            font-family: 'Noto Nastaliq Urdu';
+        }
+        body form {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+        }
+        table {
+            text-align: center;
+            background-color: transparent;
+            direction: rtl;
+            width= 75%;
+            border-collapse: collapse;
+        }
+        thead {
+            background-color: darkgrey;
+            color: #3e2723;
+        }
+        td {
+            border: 1px solid black;
+        }
+        .submit {
+            color: white;
+            border: none;
+            background-color: transparent;
+            font-family: 'Noto Nastaliq Urdu';
+            font-weight: bold;
+        }
+        select {
+            background-color: grey;
+            padding-right: 10px;
+            height: 45px;
+        }
+    </style>
+</head>
+<body>
+    <form dir="rtl" accept-charset="utf-8" >
+        بلڈ گروپ
+        <select name="bgroup">
+            <option value="ali">A+</option>
+            <option value="A-neg">A-</option>
+            <option value="B-pos">B+</option>
+            <option value="B-neg">B-</option>
+            <option value="AB-pos">AB+</option>
+            <option value="AB-neg">AB-</option>
+            <option value="O-pos">O+</option>
+            <option value="O-neg">O-</option>
+        </select>
+        <input class="submit" type="submit" value="تلاش کریں"/>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <td>نام</td>
+                <td>فون</td>
+                <td>بلڈ گروپ</td>
+                <td>مستقل پتہ</td>
+            </tr>
+        </thead>
+        <tbody data-sheetdb-url="https://sheetdb.io/api/v1/cb43hcd4r611f" data-sheetdb-query-string="bgroup">
+            <tr>
+                <td>{{name}}</td>
+                <td>{{phone}}</td>
+                <td>{{bgroup}}</td>
+                <td>{{address}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="https://sheetdb.io/handlebars.js"></script>
+</body>
+</html>
